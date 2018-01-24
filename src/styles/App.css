@@ -1,0 +1,56 @@
+body {
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+#app-logo {
+  font-family: 'Alfa Slab One', cursive;
+  font-size: xx-large;
+  color: deepskyblue;
+}
+
+aside {
+  background-color: deepskyblue;
+  height: 91vh;
+  font-size: x-large;
+}
+
+#aside-header {
+  font-weight: bold;
+  color: white;
+  margin-top: 7%;
+  padding-left: 2%;
+}
+
+aside>nav>a {
+  color: #ffffff;
+  font-weight: lighter;
+}
+
+#news-content {
+  height: 91vh;
+  padding-top: 2%;
+  overflow-y: scroll;
+}
+
+.article-title {
+  font-weight: bold;
+}
+
+.article-author {
+  font-weight: bold;
+  font-size: small;
+}
+
+.article-body {
+  font-weight: lighter;
+}
+
+.article-source {
+ font-size: small;
+}
+
+#search-bar>input, button {
+  font-weight: lighter;
+  font-size: x-large;
+  font-family: 'Nunito Sans', sans-serif;
+}
