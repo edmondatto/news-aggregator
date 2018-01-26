@@ -38,6 +38,19 @@ class App extends Component {
       })
   };
 
+  performSearch = (query = 'Uganda') => {
+    axios.get(`https://newsapi.org/v2/top-headlines?q=${query}&apiKey=${process.env.REACT_APP_KEY}`)
+      .then(response => {
+        this.setState({
+          data: response.data,
+          isLoading: !this.state.isLoading
+        })
+      })
+      .catch(error => {
+        console.log(error)
+      })
+  };
+
   render() {
     return (
       <React.Fragment>
@@ -56,7 +69,11 @@ class App extends Component {
                 </div>
               </div>
               :
-              <NewsArticles data={this.state.data}/>
+              <NewsArticles
+                data={this.state.data}
+                onSearch={this.performSearch}
+                toggleLoading={this.toggleLoading}
+              />
           }
         </div>
       </React.Fragment>

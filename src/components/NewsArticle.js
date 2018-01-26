@@ -19,7 +19,7 @@ const NewsArticle = props =>
                 By { props.author }
               </p>
               :
-              <React.Fragment></React.Fragment>
+              <React.Fragment/>
           }
           <p className="article-body">
             { props.description }
