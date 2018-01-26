@@ -19,6 +19,9 @@
 # IDE
 /.idea
 
+# Environment Variables
+.env
+
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
