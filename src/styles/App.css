@@ -54,3 +54,7 @@ aside>nav>a {
   font-size: x-large;
   font-family: 'Nunito Sans', sans-serif;
 }
+
+.loader {
+  margin: auto;
+}
