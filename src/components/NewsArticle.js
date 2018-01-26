@@ -1,30 +1,44 @@
 import React from 'react';
-import mario from '../img/mario.jpeg'
+import PropTypes from 'prop-types';
 
-const NewsArticle = () =>
+const NewsArticle = props =>
   <div className="card card-outline-primary mb-3">
     <div className="card-block">
       <div className="row">
         <div className="col-md-3 text-right">
-          <img src={mario} width="100%" height="auto"/>
+          <img src={props.urlToImage} width="100%" height="auto"/>
         </div>
         <div className="col-md-9">
           <h4 className="article-title">
-            US Tariffs, Aimed at China and South Korea, to Hit Targets Worldwide
+            { props.title }
           </h4>
-          <p className="article-author">
-            By Keith Bradsher and Sui-Lee Wee
-          </p>
+          {
+            props.author
+              ?
+              <p className="article-author">
+                By { props.author }
+              </p>
+              :
+              <React.Fragment></React.Fragment>
+          }
           <p className="article-body">
-            Broad levies taking direct aim at the two countries would most likely
-            affect other trading partners of the United States, illustrating the
-            complexity of global commerce.
-            <span><a href="#"> Read more...</a></span>
+            { props.description }
+            <span><a href={ props.url } target="_blank"> Read more...</a></span>
           </p>
-          <span className="article-source"><strong>SOURCE:</strong> The New York Times</span>
+          <span className="article-source"><strong>SOURCE:</strong> {props.source.name} </span>
         </div>
       </div>
     </div>
   </div>;
+
+NewsArticle.propTypes = {
+  title: PropTypes.string.isRequired,
+  author: PropTypes.string,
+  description: PropTypes.string,
+  source: PropTypes.string,
+  url: PropTypes.string,
+  urlToImage: PropTypes.string
+
+};
 
 export default NewsArticle;
