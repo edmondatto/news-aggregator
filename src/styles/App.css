@@ -58,3 +58,10 @@ aside>nav>a {
 .loader {
   margin: auto;
 }
+
+#no-results {
+  font-weight: lighter;
+  color: deepskyblue;
+  margin-top: 18%;
+  text-align: center;
+}
