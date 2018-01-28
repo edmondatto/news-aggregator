@@ -67,6 +67,16 @@ class NavigationDrawer extends Component {
             Technology
           </a>
         </nav>
+        <div className="container mt-5">
+          <div className="row">
+            <div className="col align-self-end text-center">
+              <p className="credits">
+                Built with ❤️ by <a href="https://twitter.com/edmondatto" target="_blank">Edmond Atto </a>
+                and powered by <a href="https://newsapi.org"> NewsAPI</a>
+              </p>
+            </div>
+          </div>
+        </div>
       </aside>
     );
   }
