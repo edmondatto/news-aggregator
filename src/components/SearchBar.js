@@ -13,9 +13,14 @@ class SearchBar extends Component {
       searchString: event.target.value
     });
 
-  handleSearch = () => {
-    this.props.onSearch(this.state.searchString);
-    this.props.toggleLoading();
+  handleSearch = event => {
+    if (this.state.searchString.trim() === ''){
+      event.preventDefault();
+      return null;
+    }else {
+      this.props.onSearch(this.state.searchString);
+      this.props.toggleLoading();
+    }
   };
 
   render(){
