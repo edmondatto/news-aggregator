@@ -17,7 +17,6 @@ class App extends Component {
 
   toggleLoading = () =>
     this.setState({
-      ...this.state,
       isLoading: !this.state.isLoading
     });
 
@@ -38,7 +37,7 @@ class App extends Component {
       })
   };
 
-  performSearch = (query = 'Uganda') => {
+  performSearch = (query) => {
     axios.get(`https://newsapi.org/v2/top-headlines?q=${query}&apiKey=${process.env.REACT_APP_KEY}`)
       .then(response => {
         this.setState({
