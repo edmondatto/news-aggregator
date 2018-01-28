@@ -65,3 +65,15 @@ aside>nav>a {
   margin-top: 18%;
   text-align: center;
 }
+
+.credits {
+  font-weight: lighter;
+  font-size: medium;
+  color: white;
+  margin-bottom: 0;
+}
+
+.credits>a {
+  font-weight: bolder;
+  color: white;
+}
