@@ -14,12 +14,10 @@ const NewsArticle = props =>
           </h4>
           {
             props.author
-              ?
+              &&
               <p className="article-author">
                 By { props.author }
               </p>
-              :
-              <React.Fragment/>
           }
           <p className="article-body">
             { props.description }
